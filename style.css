@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: Roboto;
+    position: relative;
+}
+
+#navbar {
+    padding: 10px 35px;
+    height: 50px;
+    background-color: #F5F5F6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img>img {
+    width: 89px;
+    height: 23px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 18px;
+
+}
+
+#list {
+    margin-right: 150px;
+}
+
+ul li a {
+    padding: 0px 25px;
+    color: #959BA4;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: black;
+}
+
+ul li:first-child a {
+    color: black;
+}
+
+.login-button {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    width: 587px;
+    height: 32px;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 50px 0;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    gap: 200px;
+    margin: 20px 0;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 400;
+    color: #9F9F9F;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-buttons>button,
+.right-buttons>button {
+    margin-right: -6px;
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 10px 30px;
+    background: inherit;
+    border: 1px solid #e5e5e5;
+    color: #C6C6C6;
+}
+
+button.active {
+    background-color: #833AE0;
+    color: #fff;
+}
+
+.right-input,
+.left-input {
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 20px 100px;
+    color: #000;
+    margin: 50px 0;
+    border: 1px solid #C6C6C6;
+    border-radius: 3px;
+}
+
+.left-wrapper,
+.right-wrapper {
+    position: relative;
+}
+
+.left-footer-wrapper,
+.right-footer-wrapper {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    padding: 20px 0;
+    color: #C6C6C6;
+    font-size: 20px;
+}
+
+.hamburger-wrapper {
+    position: absolute;
+    top: 50px;
+    right: -250px;
+    background-color: #F5F5F6;
+    min-height: 100vh;
+    transition: right 0.5s ease;
+}
+
+#hamburger-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 210px;
+}
+
+.hamburger-wrapper.activee {
+    right: 0px;
+}
+
+.hamburger-button {
+    display: none;
+}
+
+.error-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+@media screen and (max-width: 1300px) {
+    #list ul li a {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .hamburger-button {
+        display: block;
+    }
+
+    #list {
+        display: none;
+    }
+
+    #navbar {
+        justify-content: none;
+        padding: 10px 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .left-buttons>button,
+    .right-buttons>button {
+        width: 50%;
+    }
+
+}
