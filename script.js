@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     function updateNetworkStatus() {
         if (!navigator.onLine) {
             errorWrapper.style.display = 'block';
-            alert("İnternet bağlantısı yoxdur!");
+            errorWrapper.textContent = 'İnternet bağlantısı yoxdur'
         } else {
             errorWrapper.style.display = 'none';
         }
@@ -162,13 +162,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         hamburgerWrapper.classList.toggle('activee');
     });
 
-    function updateNetworkStatus() {
-        if (!navigator.onLine) {
-            errorWrapper.style.display = 'block';
-        } else {
-            errorWrapper.style.display = 'none';
-        }
-    }
 
     updateNetworkStatus();
     await updateFooters();
